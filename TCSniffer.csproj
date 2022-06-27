@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D75207B0-9FCF-433F-97F5-398660859502}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TCSniffer</RootNamespace>
+    <AssemblyName>TCSniffer</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="attributes\CustomEvent.cs" />
+    <Compile Include="attributes\TLVParser.cs" />
+    <Compile Include="common\Common.cs" />
+    <Compile Include="common\ICustomControlEvents.cs" />
+    <Compile Include="component\DeviceItem.cs" />
+    <Compile Include="component\PacketAnalyzer.cs" />
+    <Compile Include="component\RealTimePacketsAnalyzer.cs" />
+    <Compile Include="extension\MessageBoxEx.cs" />
+    <Compile Include="extension\MyDictionaryComparer.cs" />
+    <Compile Include="form\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\menu\CtxMenuAnalysisTools.cs" />
+    <Compile Include="form\menu\CtxMenuPackets.cs" />
+    <Compile Include="form\menu\ctxMenuStripListAnaly.cs" />
+    <Compile Include="form\TabHttpServer.cs" />
+    <Compile Include="form\TabTEA.cs" />
+    <Compile Include="form\TabTools.cs" />
+    <Compile Include="HttpServer\HttpServer.cs" />
+    <Compile Include="HttpServer\HttpServerHandler.cs" />
+    <Compile Include="HttpServer\HttpServerInitializer.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TLVParser\IParser.cs" />
+    <Compile Include="TLVParser\TLV103.cs" />
+    <Compile Include="TLVParser\TLV104.cs" />
+    <Compile Include="TLVParser\TLV109.cs" />
+    <Compile Include="TLVParser\TLV10A.cs" />
+    <Compile Include="TLVParser\TLV10D.cs" />
+    <Compile Include="TLVParser\TLV10E.cs" />
+    <Compile Include="TLVParser\TLV114.cs" />
+    <Compile Include="TLVParser\TLV116.cs" />
+    <Compile Include="TLVParser\TLV11A.cs" />
+    <Compile Include="TLVParser\TLV11D.cs" />
+    <Compile Include="TLVParser\TLV11F.cs" />
+    <Compile Include="TLVParser\TLV120.cs" />
+    <Compile Include="TLVParser\TLV130.cs" />
+    <Compile Include="TLVParser\TLV143.cs" />
+    <Compile Include="TLVParser\TLV145.cs" />
+    <Compile Include="TLVParser\TLV147.cs" />
+    <Compile Include="TLVParser\TLV154.cs" />
+    <Compile Include="TLVParser\TLV16D.cs" />
+    <Compile Include="TLVParser\TLV174.cs" />
+    <Compile Include="TLVParser\TLV177.cs" />
+    <Compile Include="TLVParser\TLV178.cs" />
+    <Compile Include="TLVParser\TLV17B.cs" />
+    <Compile Include="TLVParser\TLV17D.cs" />
+    <Compile Include="TLVParser\TLV17E.cs" />
+    <Compile Include="TLVParser\TLV187.cs" />
+    <Compile Include="TLVParser\TLV188.cs" />
+    <Compile Include="TLVParser\TLV192.cs" />
+    <Compile Include="TLVParser\TLV194.cs" />
+    <Compile Include="TLVParser\TLV202.cs" />
+    <Compile Include="TLVParser\TLV204.cs" />
+    <Compile Include="TLVParser\TLV305.cs" />
+    <Compile Include="TLVParser\TLV322.cs" />
+    <Compile Include="TLVParser\TLV511.cs" />
+    <Compile Include="TLVParser\TLV545.cs" />
+    <Compile Include="TLVParser\TLVFormatter.cs" />
+    <Compile Include="utils\FileUtil.cs" />
+    <Compile Include="utils\HexUtil.cs" />
+    <Compile Include="utils\MixUtil.cs" />
+    <Compile Include="utils\PacketLogLVI.cs" />
+    <Compile Include="utils\Tea.cs" />
+    <Compile Include="utils\Toast.cs" />
+    <EmbeddedResource Include="form\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="DotNetty.Buffers">
+      <Version>0.6.0</Version>
+    </PackageReference>
+    <PackageReference Include="DotNetty.Codecs">
+      <Version>0.6.0</Version>
+    </PackageReference>
+    <PackageReference Include="DotNetty.Codecs.Http">
+      <Version>0.6.0</Version>
+    </PackageReference>
+    <PackageReference Include="DotNetty.Common">
+      <Version>0.6.0</Version>
+    </PackageReference>
+    <PackageReference Include="DotNetty.Handlers">
+      <Version>0.6.0</Version>
+    </PackageReference>
+    <PackageReference Include="DotNetty.Transport">
+      <Version>0.6.0</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>13.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="SharpPcap">
+      <Version>5.4.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
