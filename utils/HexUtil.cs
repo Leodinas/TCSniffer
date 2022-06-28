@@ -59,8 +59,6 @@ namespace TCSniffer.utils
             return returnBytes;
         }
 
-
-
         public static string ClearSpecialSymbols(this string str)
         {
             return str.Replace(" ", "").Replace("\r", "").Replace("\n", "");
@@ -87,8 +85,6 @@ namespace TCSniffer.utils
             buf.ReadBytes(ret, 0, buf.ReadableBytes);
             return ret;
         }
-
-
         public static DateTime UnixTimeStampToDateTime(this double unixTimeStamp)
         {
             // Unix timestamp is seconds past epoch
@@ -147,6 +143,33 @@ namespace TCSniffer.utils
                 tlv_map.Add(tag, value);
             }
             return tlv_map;
+        }
+
+        public static byte[] HexStrToByteArray(string str)
+        {
+            try
+            {
+                Dictionary<string, byte> hexindex = new Dictionary<string, byte>();
+                for (int i = 0; i <= 255; i++)
+                {
+                    hexindex.Add(i.ToString("X2"), (byte)i);
+                }
+                if (str.Length % 2 == 1)
+                {
+                    str = "0" + str;
+                }
+                List<byte> hexres = new List<byte>();
+                for (int i = 0; i < str.Length; i += 2)
+                {
+                    hexres.Add(hexindex[str.Substring(i, 2)]);
+                }
+                return hexres.ToArray();
+            }
+            catch
+            {
+
+            }
+            return null;
         }
     }
 }

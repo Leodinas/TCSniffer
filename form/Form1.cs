@@ -1,13 +1,13 @@
-﻿using System;
+﻿using DotNetty.Buffers;
+using SharpPcap;
+using SharpPcap.LibPcap;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Threading;
 using System.Windows.Forms;
-using DotNetty.Buffers;
-using SharpPcap;
-using SharpPcap.LibPcap;
 using TCSniffer.common;
 using TCSniffer.component;
 using TCSniffer.utils;
@@ -24,13 +24,10 @@ namespace TCSniffer
 
         private RealTimePacketsAnalyzer RealTimePacketsAnalyzer { get; } = new RealTimePacketsAnalyzer();//数据包分析
 
-
         public Form1()
         {
             InitializeComponent();
         }
-
-
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -79,8 +76,6 @@ namespace TCSniffer
             }
             return false;
         }
-
-
 
 
         public void ThreadSafeUpdate(Action action)

@@ -48,11 +48,24 @@ namespace TCSniffer
             this.CaptureTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.PayloadLen = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.PayloadData = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ctxMenuStrip_packets = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.复制选中载荷ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.复制全部载荷ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.读取抓包记录ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.保存抓包记录ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ctxMenuStrip_analysis_tools = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tea解密ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.十六个0ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.KEY日志ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kEY逐日志ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.数据转换ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.到10进制ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.到文本ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.到QQToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dec到时间ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hex到IPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hex到时间ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.解压数据ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.计算字节数ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.TLV格式化ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.反解析ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.jCEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.r_txt_log = new System.Windows.Forms.RichTextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.splitContainer4 = new System.Windows.Forms.SplitContainer();
@@ -65,7 +78,6 @@ namespace TCSniffer
             this.载荷数据 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.解析数据 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.PBJCE数据 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.splitContainer5 = new System.Windows.Forms.SplitContainer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -88,30 +100,24 @@ namespace TCSniffer
             this.txt_tea_encrypt_data = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txt_tea_decrypt_data = new System.Windows.Forms.TextBox();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.splitContainer8 = new System.Windows.Forms.SplitContainer();
+            this.splitContainer9 = new System.Windows.Forms.SplitContainer();
+            this.button_reversePb = new System.Windows.Forms.Button();
+            this.button_reverseJce = new System.Windows.Forms.Button();
+            this.RichTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.TreeView1 = new System.Windows.Forms.TreeView();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.groupBox_keySetting = new System.Windows.Forms.GroupBox();
             this.textBox_keys = new System.Windows.Forms.TextBox();
             this.button_saveKey = new System.Windows.Forms.Button();
             this.button_readKey = new System.Windows.Forms.Button();
-            this.ctxMenuStrip_analysis_tools = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.tea解密ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.十六个0ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.KEY日志ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.kEY逐日志ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.数据转换ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.到10进制ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.到文本ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.到QQToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dec到时间ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.hex到IPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.hex到时间ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.解压数据ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.计算字节数ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.TLV格式化ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.反解析ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.jCEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ctxMenuStrip_packets = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.复制选中载荷ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.复制全部载荷ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.读取抓包记录ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.保存抓包记录ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ctxMenuStrip_trace_flow = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.复制ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.复制载荷数据ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -122,6 +128,8 @@ namespace TCSniffer
             this.解析ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.解析PB数据ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.解析JCE数据ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.treeView_analy = new System.Windows.Forms.TreeView();
+            this.分析ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -132,7 +140,7 @@ namespace TCSniffer
             this.splitContainer3.Panel1.SuspendLayout();
             this.splitContainer3.Panel2.SuspendLayout();
             this.splitContainer3.SuspendLayout();
-            this.ctxMenuStrip_packets.SuspendLayout();
+            this.ctxMenuStrip_analysis_tools.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).BeginInit();
             this.splitContainer4.Panel1.SuspendLayout();
@@ -153,12 +161,21 @@ namespace TCSniffer
             this.splitContainer7.Panel1.SuspendLayout();
             this.splitContainer7.Panel2.SuspendLayout();
             this.splitContainer7.SuspendLayout();
+            this.tabPage6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer8)).BeginInit();
+            this.splitContainer8.Panel1.SuspendLayout();
+            this.splitContainer8.Panel2.SuspendLayout();
+            this.splitContainer8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer9)).BeginInit();
+            this.splitContainer9.Panel1.SuspendLayout();
+            this.splitContainer9.Panel2.SuspendLayout();
+            this.splitContainer9.SuspendLayout();
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.SuspendLayout();
             this.groupBox_keySetting.SuspendLayout();
-            this.ctxMenuStrip_analysis_tools.SuspendLayout();
+            this.ctxMenuStrip_packets.SuspendLayout();
             this.ctxMenuStrip_trace_flow.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -168,6 +185,7 @@ namespace TCSniffer
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Controls.Add(this.tabPage6);
             this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Cursor = System.Windows.Forms.Cursors.Default;
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -225,7 +243,7 @@ namespace TCSniffer
             this.button_analy.Name = "button_analy";
             this.button_analy.Size = new System.Drawing.Size(75, 23);
             this.button_analy.TabIndex = 9;
-            this.button_analy.Text = "分析";
+            this.button_analy.Text = "一键分析";
             this.button_analy.UseVisualStyleBackColor = true;
             this.button_analy.Click += new System.EventHandler(this.button_analy_Click);
             // 
@@ -352,39 +370,133 @@ namespace TCSniffer
             this.PayloadData.Text = "载荷数据";
             this.PayloadData.Width = 400;
             // 
-            // ctxMenuStrip_packets
+            // ctxMenuStrip_analysis_tools
             // 
-            this.ctxMenuStrip_packets.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.复制选中载荷ToolStripMenuItem,
-            this.复制全部载荷ToolStripMenuItem,
-            this.读取抓包记录ToolStripMenuItem,
-            this.保存抓包记录ToolStripMenuItem});
-            this.ctxMenuStrip_packets.Name = "ctxMenuStrip_packets";
-            this.ctxMenuStrip_packets.Size = new System.Drawing.Size(149, 92);
+            this.ctxMenuStrip_analysis_tools.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tea解密ToolStripMenuItem,
+            this.数据转换ToolStripMenuItem,
+            this.计算字节数ToolStripMenuItem,
+            this.TLV格式化ToolStripMenuItem,
+            this.反解析ToolStripMenuItem});
+            this.ctxMenuStrip_analysis_tools.Name = "ctxMenuStrip_analysis_tools";
+            this.ctxMenuStrip_analysis_tools.Size = new System.Drawing.Size(137, 114);
             // 
-            // 复制选中载荷ToolStripMenuItem
+            // tea解密ToolStripMenuItem
             // 
-            this.复制选中载荷ToolStripMenuItem.Name = "复制选中载荷ToolStripMenuItem";
-            this.复制选中载荷ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
-            this.复制选中载荷ToolStripMenuItem.Text = "复制选中载荷";
+            this.tea解密ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.十六个0ToolStripMenuItem,
+            this.KEY日志ToolStripMenuItem,
+            this.kEY逐日志ToolStripMenuItem});
+            this.tea解密ToolStripMenuItem.Name = "tea解密ToolStripMenuItem";
+            this.tea解密ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.tea解密ToolStripMenuItem.Text = "Tea解密";
             // 
-            // 复制全部载荷ToolStripMenuItem
+            // 十六个0ToolStripMenuItem
             // 
-            this.复制全部载荷ToolStripMenuItem.Name = "复制全部载荷ToolStripMenuItem";
-            this.复制全部载荷ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
-            this.复制全部载荷ToolStripMenuItem.Text = "复制全部载荷";
+            this.十六个0ToolStripMenuItem.Name = "十六个0ToolStripMenuItem";
+            this.十六个0ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.十六个0ToolStripMenuItem.Text = "十六个0";
             // 
-            // 读取抓包记录ToolStripMenuItem
+            // KEY日志ToolStripMenuItem
             // 
-            this.读取抓包记录ToolStripMenuItem.Name = "读取抓包记录ToolStripMenuItem";
-            this.读取抓包记录ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
-            this.读取抓包记录ToolStripMenuItem.Text = "读取抓包记录";
+            this.KEY日志ToolStripMenuItem.Name = "KEY日志ToolStripMenuItem";
+            this.KEY日志ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.KEY日志ToolStripMenuItem.Text = "KEY日志";
             // 
-            // 保存抓包记录ToolStripMenuItem
+            // kEY逐日志ToolStripMenuItem
             // 
-            this.保存抓包记录ToolStripMenuItem.Name = "保存抓包记录ToolStripMenuItem";
-            this.保存抓包记录ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
-            this.保存抓包记录ToolStripMenuItem.Text = "保存抓包记录";
+            this.kEY逐日志ToolStripMenuItem.Name = "kEY逐日志ToolStripMenuItem";
+            this.kEY逐日志ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.kEY逐日志ToolStripMenuItem.Text = "KEY逐字节";
+            // 
+            // 数据转换ToolStripMenuItem
+            // 
+            this.数据转换ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.到10进制ToolStripMenuItem,
+            this.到文本ToolStripMenuItem,
+            this.到QQToolStripMenuItem,
+            this.dec到时间ToolStripMenuItem,
+            this.hex到IPToolStripMenuItem,
+            this.hex到时间ToolStripMenuItem,
+            this.解压数据ToolStripMenuItem});
+            this.数据转换ToolStripMenuItem.Name = "数据转换ToolStripMenuItem";
+            this.数据转换ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.数据转换ToolStripMenuItem.Text = "数据转换";
+            // 
+            // 到10进制ToolStripMenuItem
+            // 
+            this.到10进制ToolStripMenuItem.Name = "到10进制ToolStripMenuItem";
+            this.到10进制ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.到10进制ToolStripMenuItem.Text = "到10进制";
+            // 
+            // 到文本ToolStripMenuItem
+            // 
+            this.到文本ToolStripMenuItem.Name = "到文本ToolStripMenuItem";
+            this.到文本ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.到文本ToolStripMenuItem.Text = "到文本";
+            // 
+            // 到QQToolStripMenuItem
+            // 
+            this.到QQToolStripMenuItem.Name = "到QQToolStripMenuItem";
+            this.到QQToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.到QQToolStripMenuItem.Text = "到QQ";
+            // 
+            // dec到时间ToolStripMenuItem
+            // 
+            this.dec到时间ToolStripMenuItem.Name = "dec到时间ToolStripMenuItem";
+            this.dec到时间ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.dec到时间ToolStripMenuItem.Text = "Dec到时间";
+            // 
+            // hex到IPToolStripMenuItem
+            // 
+            this.hex到IPToolStripMenuItem.Name = "hex到IPToolStripMenuItem";
+            this.hex到IPToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.hex到IPToolStripMenuItem.Text = "Hex到IP";
+            // 
+            // hex到时间ToolStripMenuItem
+            // 
+            this.hex到时间ToolStripMenuItem.Name = "hex到时间ToolStripMenuItem";
+            this.hex到时间ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.hex到时间ToolStripMenuItem.Text = "Hex到时间";
+            // 
+            // 解压数据ToolStripMenuItem
+            // 
+            this.解压数据ToolStripMenuItem.Name = "解压数据ToolStripMenuItem";
+            this.解压数据ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.解压数据ToolStripMenuItem.Text = "解压数据";
+            // 
+            // 计算字节数ToolStripMenuItem
+            // 
+            this.计算字节数ToolStripMenuItem.Name = "计算字节数ToolStripMenuItem";
+            this.计算字节数ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.计算字节数ToolStripMenuItem.Text = "计算字节数";
+            // 
+            // TLV格式化ToolStripMenuItem
+            // 
+            this.TLV格式化ToolStripMenuItem.Name = "TLV格式化ToolStripMenuItem";
+            this.TLV格式化ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.TLV格式化ToolStripMenuItem.Text = "TLV格式化";
+            // 
+            // 反解析ToolStripMenuItem
+            // 
+            this.反解析ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.jCEToolStripMenuItem,
+            this.pBToolStripMenuItem});
+            this.反解析ToolStripMenuItem.Name = "反解析ToolStripMenuItem";
+            this.反解析ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.反解析ToolStripMenuItem.Text = "反解析";
+            // 
+            // jCEToolStripMenuItem
+            // 
+            this.jCEToolStripMenuItem.Name = "jCEToolStripMenuItem";
+            this.jCEToolStripMenuItem.Size = new System.Drawing.Size(96, 22);
+            this.jCEToolStripMenuItem.Text = "JCE";
+            // 
+            // pBToolStripMenuItem
+            // 
+            this.pBToolStripMenuItem.Name = "pBToolStripMenuItem";
+            this.pBToolStripMenuItem.Size = new System.Drawing.Size(96, 22);
+            this.pBToolStripMenuItem.Text = "PB";
             // 
             // r_txt_log
             // 
@@ -419,7 +531,7 @@ namespace TCSniffer
             // 
             // splitContainer4.Panel2
             // 
-            this.splitContainer4.Panel2.Controls.Add(this.richTextBox2);
+            this.splitContainer4.Panel2.Controls.Add(this.treeView_analy);
             this.splitContainer4.Size = new System.Drawing.Size(956, 601);
             this.splitContainer4.SplitterDistance = 318;
             this.splitContainer4.TabIndex = 0;
@@ -484,15 +596,6 @@ namespace TCSniffer
             // 
             this.PBJCE数据.Text = "PB/JCE数据";
             this.PBJCE数据.Width = 100;
-            // 
-            // richTextBox2
-            // 
-            this.richTextBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox2.Location = new System.Drawing.Point(0, 0);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(956, 279);
-            this.richTextBox2.TabIndex = 0;
-            this.richTextBox2.Text = "";
             // 
             // tabPage3
             // 
@@ -743,6 +846,91 @@ namespace TCSniffer
             this.txt_tea_decrypt_data.Size = new System.Drawing.Size(956, 273);
             this.txt_tea_decrypt_data.TabIndex = 6;
             // 
+            // tabPage6
+            // 
+            this.tabPage6.Controls.Add(this.splitContainer8);
+            this.tabPage6.Location = new System.Drawing.Point(4, 22);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Size = new System.Drawing.Size(962, 607);
+            this.tabPage6.TabIndex = 5;
+            this.tabPage6.Text = "PB/JCE解析";
+            this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // splitContainer8
+            // 
+            this.splitContainer8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer8.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer8.Name = "splitContainer8";
+            // 
+            // splitContainer8.Panel1
+            // 
+            this.splitContainer8.Panel1.Controls.Add(this.splitContainer9);
+            // 
+            // splitContainer8.Panel2
+            // 
+            this.splitContainer8.Panel2.Controls.Add(this.TreeView1);
+            this.splitContainer8.Size = new System.Drawing.Size(962, 607);
+            this.splitContainer8.SplitterDistance = 474;
+            this.splitContainer8.TabIndex = 0;
+            // 
+            // splitContainer9
+            // 
+            this.splitContainer9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer9.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer9.Name = "splitContainer9";
+            this.splitContainer9.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer9.Panel1
+            // 
+            this.splitContainer9.Panel1.Controls.Add(this.button_reversePb);
+            this.splitContainer9.Panel1.Controls.Add(this.button_reverseJce);
+            // 
+            // splitContainer9.Panel2
+            // 
+            this.splitContainer9.Panel2.Controls.Add(this.RichTextBox1);
+            this.splitContainer9.Size = new System.Drawing.Size(474, 607);
+            this.splitContainer9.SplitterDistance = 42;
+            this.splitContainer9.TabIndex = 0;
+            // 
+            // button_reversePb
+            // 
+            this.button_reversePb.Location = new System.Drawing.Point(8, 12);
+            this.button_reversePb.Name = "button_reversePb";
+            this.button_reversePb.Size = new System.Drawing.Size(82, 26);
+            this.button_reversePb.TabIndex = 16;
+            this.button_reversePb.Text = "PB解析";
+            this.button_reversePb.UseVisualStyleBackColor = true;
+            // 
+            // button_reverseJce
+            // 
+            this.button_reverseJce.Location = new System.Drawing.Point(96, 12);
+            this.button_reverseJce.Name = "button_reverseJce";
+            this.button_reverseJce.Size = new System.Drawing.Size(82, 26);
+            this.button_reverseJce.TabIndex = 16;
+            this.button_reverseJce.Text = "Jce解析";
+            this.button_reverseJce.UseVisualStyleBackColor = true;
+            // 
+            // RichTextBox1
+            // 
+            this.RichTextBox1.BackColor = System.Drawing.SystemColors.WindowText;
+            this.RichTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.RichTextBox1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.RichTextBox1.Location = new System.Drawing.Point(0, 0);
+            this.RichTextBox1.Name = "RichTextBox1";
+            this.RichTextBox1.Size = new System.Drawing.Size(474, 561);
+            this.RichTextBox1.TabIndex = 15;
+            this.RichTextBox1.Text = "";
+            // 
+            // TreeView1
+            // 
+            this.TreeView1.BackColor = System.Drawing.SystemColors.WindowText;
+            this.TreeView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TreeView1.ForeColor = System.Drawing.SystemColors.Info;
+            this.TreeView1.Location = new System.Drawing.Point(0, 0);
+            this.TreeView1.Name = "TreeView1";
+            this.TreeView1.Size = new System.Drawing.Size(484, 607);
+            this.TreeView1.TabIndex = 17;
+            // 
             // tabPage5
             // 
             this.tabPage5.Controls.Add(this.splitContainer2);
@@ -812,142 +1000,49 @@ namespace TCSniffer
             this.button_readKey.Text = "读取";
             this.button_readKey.UseVisualStyleBackColor = true;
             // 
-            // ctxMenuStrip_analysis_tools
+            // ctxMenuStrip_packets
             // 
-            this.ctxMenuStrip_analysis_tools.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tea解密ToolStripMenuItem,
-            this.数据转换ToolStripMenuItem,
-            this.计算字节数ToolStripMenuItem,
-            this.TLV格式化ToolStripMenuItem,
-            this.反解析ToolStripMenuItem});
-            this.ctxMenuStrip_analysis_tools.Name = "ctxMenuStrip_analysis_tools";
-            this.ctxMenuStrip_analysis_tools.Size = new System.Drawing.Size(137, 114);
+            this.ctxMenuStrip_packets.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.复制选中载荷ToolStripMenuItem,
+            this.复制全部载荷ToolStripMenuItem,
+            this.读取抓包记录ToolStripMenuItem,
+            this.保存抓包记录ToolStripMenuItem});
+            this.ctxMenuStrip_packets.Name = "ctxMenuStrip_packets";
+            this.ctxMenuStrip_packets.Size = new System.Drawing.Size(149, 92);
             // 
-            // tea解密ToolStripMenuItem
+            // 复制选中载荷ToolStripMenuItem
             // 
-            this.tea解密ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.十六个0ToolStripMenuItem,
-            this.KEY日志ToolStripMenuItem,
-            this.kEY逐日志ToolStripMenuItem});
-            this.tea解密ToolStripMenuItem.Name = "tea解密ToolStripMenuItem";
-            this.tea解密ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
-            this.tea解密ToolStripMenuItem.Text = "Tea解密";
+            this.复制选中载荷ToolStripMenuItem.Name = "复制选中载荷ToolStripMenuItem";
+            this.复制选中载荷ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.复制选中载荷ToolStripMenuItem.Text = "复制选中载荷";
             // 
-            // 十六个0ToolStripMenuItem
+            // 复制全部载荷ToolStripMenuItem
             // 
-            this.十六个0ToolStripMenuItem.Name = "十六个0ToolStripMenuItem";
-            this.十六个0ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
-            this.十六个0ToolStripMenuItem.Text = "十六个0";
+            this.复制全部载荷ToolStripMenuItem.Name = "复制全部载荷ToolStripMenuItem";
+            this.复制全部载荷ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.复制全部载荷ToolStripMenuItem.Text = "复制全部载荷";
             // 
-            // KEY日志ToolStripMenuItem
+            // 读取抓包记录ToolStripMenuItem
             // 
-            this.KEY日志ToolStripMenuItem.Name = "KEY日志ToolStripMenuItem";
-            this.KEY日志ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
-            this.KEY日志ToolStripMenuItem.Text = "KEY日志";
+            this.读取抓包记录ToolStripMenuItem.Name = "读取抓包记录ToolStripMenuItem";
+            this.读取抓包记录ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.读取抓包记录ToolStripMenuItem.Text = "读取抓包记录";
             // 
-            // kEY逐日志ToolStripMenuItem
+            // 保存抓包记录ToolStripMenuItem
             // 
-            this.kEY逐日志ToolStripMenuItem.Name = "kEY逐日志ToolStripMenuItem";
-            this.kEY逐日志ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
-            this.kEY逐日志ToolStripMenuItem.Text = "KEY逐字节";
-            // 
-            // 数据转换ToolStripMenuItem
-            // 
-            this.数据转换ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.到10进制ToolStripMenuItem,
-            this.到文本ToolStripMenuItem,
-            this.到QQToolStripMenuItem,
-            this.dec到时间ToolStripMenuItem,
-            this.hex到IPToolStripMenuItem,
-            this.hex到时间ToolStripMenuItem,
-            this.解压数据ToolStripMenuItem});
-            this.数据转换ToolStripMenuItem.Name = "数据转换ToolStripMenuItem";
-            this.数据转换ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
-            this.数据转换ToolStripMenuItem.Text = "数据转换";
-            // 
-            // 到10进制ToolStripMenuItem
-            // 
-            this.到10进制ToolStripMenuItem.Name = "到10进制ToolStripMenuItem";
-            this.到10进制ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
-            this.到10进制ToolStripMenuItem.Text = "到10进制";
-            // 
-            // 到文本ToolStripMenuItem
-            // 
-            this.到文本ToolStripMenuItem.Name = "到文本ToolStripMenuItem";
-            this.到文本ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
-            this.到文本ToolStripMenuItem.Text = "到文本";
-            // 
-            // 到QQToolStripMenuItem
-            // 
-            this.到QQToolStripMenuItem.Name = "到QQToolStripMenuItem";
-            this.到QQToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
-            this.到QQToolStripMenuItem.Text = "到QQ";
-            // 
-            // dec到时间ToolStripMenuItem
-            // 
-            this.dec到时间ToolStripMenuItem.Name = "dec到时间ToolStripMenuItem";
-            this.dec到时间ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
-            this.dec到时间ToolStripMenuItem.Text = "Dec到时间";
-            // 
-            // hex到IPToolStripMenuItem
-            // 
-            this.hex到IPToolStripMenuItem.Name = "hex到IPToolStripMenuItem";
-            this.hex到IPToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
-            this.hex到IPToolStripMenuItem.Text = "Hex到IP";
-            // 
-            // hex到时间ToolStripMenuItem
-            // 
-            this.hex到时间ToolStripMenuItem.Name = "hex到时间ToolStripMenuItem";
-            this.hex到时间ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
-            this.hex到时间ToolStripMenuItem.Text = "Hex到时间";
-            // 
-            // 解压数据ToolStripMenuItem
-            // 
-            this.解压数据ToolStripMenuItem.Name = "解压数据ToolStripMenuItem";
-            this.解压数据ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
-            this.解压数据ToolStripMenuItem.Text = "解压数据";
-            // 
-            // 计算字节数ToolStripMenuItem
-            // 
-            this.计算字节数ToolStripMenuItem.Name = "计算字节数ToolStripMenuItem";
-            this.计算字节数ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
-            this.计算字节数ToolStripMenuItem.Text = "计算字节数";
-            // 
-            // TLV格式化ToolStripMenuItem
-            // 
-            this.TLV格式化ToolStripMenuItem.Name = "TLV格式化ToolStripMenuItem";
-            this.TLV格式化ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
-            this.TLV格式化ToolStripMenuItem.Text = "TLV格式化";
-            // 
-            // 反解析ToolStripMenuItem
-            // 
-            this.反解析ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.jCEToolStripMenuItem,
-            this.pBToolStripMenuItem});
-            this.反解析ToolStripMenuItem.Name = "反解析ToolStripMenuItem";
-            this.反解析ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
-            this.反解析ToolStripMenuItem.Text = "反解析";
-            // 
-            // jCEToolStripMenuItem
-            // 
-            this.jCEToolStripMenuItem.Name = "jCEToolStripMenuItem";
-            this.jCEToolStripMenuItem.Size = new System.Drawing.Size(96, 22);
-            this.jCEToolStripMenuItem.Text = "JCE";
-            // 
-            // pBToolStripMenuItem
-            // 
-            this.pBToolStripMenuItem.Name = "pBToolStripMenuItem";
-            this.pBToolStripMenuItem.Size = new System.Drawing.Size(96, 22);
-            this.pBToolStripMenuItem.Text = "PB";
+            this.保存抓包记录ToolStripMenuItem.Name = "保存抓包记录ToolStripMenuItem";
+            this.保存抓包记录ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.保存抓包记录ToolStripMenuItem.Text = "保存抓包记录";
             // 
             // ctxMenuStrip_trace_flow
             // 
             this.ctxMenuStrip_trace_flow.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.复制ToolStripMenuItem,
             this.清空数据ToolStripMenuItem,
-            this.解析ToolStripMenuItem});
+            this.解析ToolStripMenuItem,
+            this.分析ToolStripMenuItem});
             this.ctxMenuStrip_trace_flow.Name = "ctxMenuStrip_trace_flow";
-            this.ctxMenuStrip_trace_flow.Size = new System.Drawing.Size(125, 70);
+            this.ctxMenuStrip_trace_flow.Size = new System.Drawing.Size(125, 92);
             // 
             // 复制ToolStripMenuItem
             // 
@@ -957,7 +1052,7 @@ namespace TCSniffer
             this.复制PBJCE数据ToolStripMenuItem,
             this.复制ServiceCmdToolStripMenuItem});
             this.复制ToolStripMenuItem.Name = "复制ToolStripMenuItem";
-            this.复制ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.复制ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.复制ToolStripMenuItem.Text = "复制";
             // 
             // 复制载荷数据ToolStripMenuItem
@@ -987,7 +1082,7 @@ namespace TCSniffer
             // 清空数据ToolStripMenuItem
             // 
             this.清空数据ToolStripMenuItem.Name = "清空数据ToolStripMenuItem";
-            this.清空数据ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.清空数据ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.清空数据ToolStripMenuItem.Text = "清空数据";
             // 
             // 解析ToolStripMenuItem
@@ -1011,6 +1106,22 @@ namespace TCSniffer
             this.解析JCE数据ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.解析JCE数据ToolStripMenuItem.Text = "解析JCE数据";
             // 
+            // treeView_analy
+            // 
+            this.treeView_analy.BackColor = System.Drawing.SystemColors.WindowText;
+            this.treeView_analy.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.treeView_analy.ForeColor = System.Drawing.SystemColors.Info;
+            this.treeView_analy.Location = new System.Drawing.Point(0, 0);
+            this.treeView_analy.Name = "treeView_analy";
+            this.treeView_analy.Size = new System.Drawing.Size(956, 279);
+            this.treeView_analy.TabIndex = 18;
+            // 
+            // 分析ToolStripMenuItem
+            // 
+            this.分析ToolStripMenuItem.Name = "分析ToolStripMenuItem";
+            this.分析ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.分析ToolStripMenuItem.Text = "分析";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -1030,7 +1141,7 @@ namespace TCSniffer
             this.splitContainer3.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
             this.splitContainer3.ResumeLayout(false);
-            this.ctxMenuStrip_packets.ResumeLayout(false);
+            this.ctxMenuStrip_analysis_tools.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.splitContainer4.Panel1.ResumeLayout(false);
             this.splitContainer4.Panel2.ResumeLayout(false);
@@ -1055,13 +1166,22 @@ namespace TCSniffer
             this.splitContainer7.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer7)).EndInit();
             this.splitContainer7.ResumeLayout(false);
+            this.tabPage6.ResumeLayout(false);
+            this.splitContainer8.Panel1.ResumeLayout(false);
+            this.splitContainer8.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer8)).EndInit();
+            this.splitContainer8.ResumeLayout(false);
+            this.splitContainer9.Panel1.ResumeLayout(false);
+            this.splitContainer9.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer9)).EndInit();
+            this.splitContainer9.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);
             this.splitContainer2.Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
             this.groupBox_keySetting.ResumeLayout(false);
             this.groupBox_keySetting.PerformLayout();
-            this.ctxMenuStrip_analysis_tools.ResumeLayout(false);
+            this.ctxMenuStrip_packets.ResumeLayout(false);
             this.ctxMenuStrip_trace_flow.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -1087,9 +1207,7 @@ namespace TCSniffer
         public System.Windows.Forms.TextBox textBox_keys;
         public System.Windows.Forms.Button button_saveKey;
         public System.Windows.Forms.Button button_readKey;
-        private System.Windows.Forms.Button button_analy;
         private System.Windows.Forms.SplitContainer splitContainer4;
-        private System.Windows.Forms.RichTextBox richTextBox2;
         public System.Windows.Forms.ListView listView_analysis;
         private System.Windows.Forms.ColumnHeader 方向;
         private System.Windows.Forms.ColumnHeader ServiceCmd;
@@ -1159,8 +1277,18 @@ namespace TCSniffer
         public System.Windows.Forms.ToolStripMenuItem 复制ServiceCmdToolStripMenuItem;
         public System.Windows.Forms.ToolStripMenuItem 清空数据ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 解析ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 解析PB数据ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 解析JCE数据ToolStripMenuItem;
+        private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.SplitContainer splitContainer8;
+        private System.Windows.Forms.SplitContainer splitContainer9;
+        internal System.Windows.Forms.RichTextBox RichTextBox1;
+        public System.Windows.Forms.Button button_reverseJce;
+        public System.Windows.Forms.TreeView TreeView1;
+        public System.Windows.Forms.Button button_reversePb;
+        public System.Windows.Forms.ToolStripMenuItem 解析PB数据ToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem 解析JCE数据ToolStripMenuItem;
+        public System.Windows.Forms.TreeView treeView_analy;
+        public System.Windows.Forms.ToolStripMenuItem 分析ToolStripMenuItem;
+        public System.Windows.Forms.Button button_analy;
     }
 }
 
