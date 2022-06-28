@@ -78,6 +78,7 @@ namespace TCSniffer
             this.载荷数据 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.解析数据 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.PBJCE数据 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.treeView_analy = new System.Windows.Forms.TreeView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.splitContainer5 = new System.Windows.Forms.SplitContainer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -128,8 +129,24 @@ namespace TCSniffer
             this.解析ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.解析PB数据ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.解析JCE数据ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.treeView_analy = new System.Windows.Forms.TreeView();
             this.分析ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btn_tool_md5_copy_once = new System.Windows.Forms.Button();
+            this.txt_tool_md5_once = new System.Windows.Forms.TextBox();
+            this.btn_tool_md5_calc = new System.Windows.Forms.Button();
+            this.txt_tool_md5_input = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txt_tool_qqencrypt_pass = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.btn_tool_qqencrypt_copy = new System.Windows.Forms.Button();
+            this.txt_tool_qqencrypt_ret = new System.Windows.Forms.TextBox();
+            this.btn_tool_qqencrypt_calc = new System.Windows.Forms.Button();
+            this.txt_tool_qqencrypt_qq = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -173,10 +190,13 @@ namespace TCSniffer
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
+            this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
             this.groupBox_keySetting.SuspendLayout();
             this.ctxMenuStrip_packets.SuspendLayout();
             this.ctxMenuStrip_trace_flow.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -368,7 +388,7 @@ namespace TCSniffer
             // PayloadData
             // 
             this.PayloadData.Text = "载荷数据";
-            this.PayloadData.Width = 400;
+            this.PayloadData.Width = 300;
             // 
             // ctxMenuStrip_analysis_tools
             // 
@@ -596,6 +616,16 @@ namespace TCSniffer
             // 
             this.PBJCE数据.Text = "PB/JCE数据";
             this.PBJCE数据.Width = 100;
+            // 
+            // treeView_analy
+            // 
+            this.treeView_analy.BackColor = System.Drawing.SystemColors.WindowText;
+            this.treeView_analy.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.treeView_analy.ForeColor = System.Drawing.SystemColors.Info;
+            this.treeView_analy.Location = new System.Drawing.Point(0, 0);
+            this.treeView_analy.Name = "treeView_analy";
+            this.treeView_analy.Size = new System.Drawing.Size(956, 279);
+            this.treeView_analy.TabIndex = 18;
             // 
             // tabPage3
             // 
@@ -939,7 +969,7 @@ namespace TCSniffer
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage5.Size = new System.Drawing.Size(962, 607);
             this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "软件设置";
+            this.tabPage5.Text = "其他工具";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
             // splitContainer2
@@ -951,6 +981,11 @@ namespace TCSniffer
             // splitContainer2.Panel1
             // 
             this.splitContainer2.Panel1.Controls.Add(this.groupBox_keySetting);
+            // 
+            // splitContainer2.Panel2
+            // 
+            this.splitContainer2.Panel2.Controls.Add(this.groupBox4);
+            this.splitContainer2.Panel2.Controls.Add(this.groupBox3);
             this.splitContainer2.Size = new System.Drawing.Size(956, 601);
             this.splitContainer2.SplitterDistance = 398;
             this.splitContainer2.TabIndex = 0;
@@ -1058,25 +1093,25 @@ namespace TCSniffer
             // 复制载荷数据ToolStripMenuItem
             // 
             this.复制载荷数据ToolStripMenuItem.Name = "复制载荷数据ToolStripMenuItem";
-            this.复制载荷数据ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.复制载荷数据ToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.复制载荷数据ToolStripMenuItem.Text = "复制载荷数据";
             // 
             // 复制解析数据ToolStripMenuItem
             // 
             this.复制解析数据ToolStripMenuItem.Name = "复制解析数据ToolStripMenuItem";
-            this.复制解析数据ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.复制解析数据ToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.复制解析数据ToolStripMenuItem.Text = "复制解析数据";
             // 
             // 复制PBJCE数据ToolStripMenuItem
             // 
             this.复制PBJCE数据ToolStripMenuItem.Name = "复制PBJCE数据ToolStripMenuItem";
-            this.复制PBJCE数据ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.复制PBJCE数据ToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.复制PBJCE数据ToolStripMenuItem.Text = "复制PB/JCE数据";
             // 
             // 复制ServiceCmdToolStripMenuItem
             // 
             this.复制ServiceCmdToolStripMenuItem.Name = "复制ServiceCmdToolStripMenuItem";
-            this.复制ServiceCmdToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.复制ServiceCmdToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.复制ServiceCmdToolStripMenuItem.Text = "复制ServiceCmd";
             // 
             // 清空数据ToolStripMenuItem
@@ -1097,30 +1132,178 @@ namespace TCSniffer
             // 解析PB数据ToolStripMenuItem
             // 
             this.解析PB数据ToolStripMenuItem.Name = "解析PB数据ToolStripMenuItem";
-            this.解析PB数据ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.解析PB数据ToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.解析PB数据ToolStripMenuItem.Text = "解析PB数据";
             // 
             // 解析JCE数据ToolStripMenuItem
             // 
             this.解析JCE数据ToolStripMenuItem.Name = "解析JCE数据ToolStripMenuItem";
-            this.解析JCE数据ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.解析JCE数据ToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.解析JCE数据ToolStripMenuItem.Text = "解析JCE数据";
-            // 
-            // treeView_analy
-            // 
-            this.treeView_analy.BackColor = System.Drawing.SystemColors.WindowText;
-            this.treeView_analy.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.treeView_analy.ForeColor = System.Drawing.SystemColors.Info;
-            this.treeView_analy.Location = new System.Drawing.Point(0, 0);
-            this.treeView_analy.Name = "treeView_analy";
-            this.treeView_analy.Size = new System.Drawing.Size(956, 279);
-            this.treeView_analy.TabIndex = 18;
             // 
             // 分析ToolStripMenuItem
             // 
             this.分析ToolStripMenuItem.Name = "分析ToolStripMenuItem";
-            this.分析ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.分析ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.分析ToolStripMenuItem.Text = "分析";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.btn_tool_md5_copy_once);
+            this.groupBox3.Controls.Add(this.txt_tool_md5_once);
+            this.groupBox3.Controls.Add(this.btn_tool_md5_calc);
+            this.groupBox3.Controls.Add(this.txt_tool_md5_input);
+            this.groupBox3.Controls.Add(this.label7);
+            this.groupBox3.Controls.Add(this.label6);
+            this.groupBox3.Location = new System.Drawing.Point(11, 3);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(535, 76);
+            this.groupBox3.TabIndex = 6;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "MD5计算";
+            // 
+            // btn_tool_md5_copy_once
+            // 
+            this.btn_tool_md5_copy_once.Location = new System.Drawing.Point(463, 42);
+            this.btn_tool_md5_copy_once.Name = "btn_tool_md5_copy_once";
+            this.btn_tool_md5_copy_once.Size = new System.Drawing.Size(61, 23);
+            this.btn_tool_md5_copy_once.TabIndex = 8;
+            this.btn_tool_md5_copy_once.Text = "复制";
+            this.btn_tool_md5_copy_once.UseVisualStyleBackColor = true;
+            // 
+            // txt_tool_md5_once
+            // 
+            this.txt_tool_md5_once.Location = new System.Drawing.Point(57, 44);
+            this.txt_tool_md5_once.Name = "txt_tool_md5_once";
+            this.txt_tool_md5_once.Size = new System.Drawing.Size(397, 21);
+            this.txt_tool_md5_once.TabIndex = 7;
+            // 
+            // btn_tool_md5_calc
+            // 
+            this.btn_tool_md5_calc.Location = new System.Drawing.Point(463, 16);
+            this.btn_tool_md5_calc.Name = "btn_tool_md5_calc";
+            this.btn_tool_md5_calc.Size = new System.Drawing.Size(61, 23);
+            this.btn_tool_md5_calc.TabIndex = 6;
+            this.btn_tool_md5_calc.Text = "计算";
+            this.btn_tool_md5_calc.UseVisualStyleBackColor = true;
+            // 
+            // txt_tool_md5_input
+            // 
+            this.txt_tool_md5_input.Location = new System.Drawing.Point(57, 17);
+            this.txt_tool_md5_input.Name = "txt_tool_md5_input";
+            this.txt_tool_md5_input.Size = new System.Drawing.Size(397, 21);
+            this.txt_tool_md5_input.TabIndex = 2;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 49);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(47, 12);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "MD5一次";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 20);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(29, 12);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "内容";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.label11);
+            this.groupBox4.Controls.Add(this.txt_tool_qqencrypt_pass);
+            this.groupBox4.Controls.Add(this.label10);
+            this.groupBox4.Controls.Add(this.btn_tool_qqencrypt_copy);
+            this.groupBox4.Controls.Add(this.txt_tool_qqencrypt_ret);
+            this.groupBox4.Controls.Add(this.btn_tool_qqencrypt_calc);
+            this.groupBox4.Controls.Add(this.txt_tool_qqencrypt_qq);
+            this.groupBox4.Controls.Add(this.label8);
+            this.groupBox4.Controls.Add(this.label9);
+            this.groupBox4.Location = new System.Drawing.Point(11, 85);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(535, 115);
+            this.groupBox4.TabIndex = 7;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "QQ密码加密";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(6, 95);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(233, 12);
+            this.label11.TabIndex = 11;
+            this.label11.Text = "md5(md5(pass) + 00 00 00 00 + hex(qq))";
+            // 
+            // txt_tool_qqencrypt_pass
+            // 
+            this.txt_tool_qqencrypt_pass.Location = new System.Drawing.Point(302, 16);
+            this.txt_tool_qqencrypt_pass.Name = "txt_tool_qqencrypt_pass";
+            this.txt_tool_qqencrypt_pass.Size = new System.Drawing.Size(152, 21);
+            this.txt_tool_qqencrypt_pass.TabIndex = 10;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(251, 20);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(29, 12);
+            this.label10.TabIndex = 9;
+            this.label10.Text = "密码";
+            // 
+            // btn_tool_qqencrypt_copy
+            // 
+            this.btn_tool_qqencrypt_copy.Location = new System.Drawing.Point(463, 51);
+            this.btn_tool_qqencrypt_copy.Name = "btn_tool_qqencrypt_copy";
+            this.btn_tool_qqencrypt_copy.Size = new System.Drawing.Size(61, 23);
+            this.btn_tool_qqencrypt_copy.TabIndex = 8;
+            this.btn_tool_qqencrypt_copy.Text = "复制";
+            this.btn_tool_qqencrypt_copy.UseVisualStyleBackColor = true;
+            // 
+            // txt_tool_qqencrypt_ret
+            // 
+            this.txt_tool_qqencrypt_ret.Location = new System.Drawing.Point(57, 53);
+            this.txt_tool_qqencrypt_ret.Name = "txt_tool_qqencrypt_ret";
+            this.txt_tool_qqencrypt_ret.Size = new System.Drawing.Size(397, 21);
+            this.txt_tool_qqencrypt_ret.TabIndex = 7;
+            // 
+            // btn_tool_qqencrypt_calc
+            // 
+            this.btn_tool_qqencrypt_calc.Location = new System.Drawing.Point(463, 16);
+            this.btn_tool_qqencrypt_calc.Name = "btn_tool_qqencrypt_calc";
+            this.btn_tool_qqencrypt_calc.Size = new System.Drawing.Size(61, 23);
+            this.btn_tool_qqencrypt_calc.TabIndex = 6;
+            this.btn_tool_qqencrypt_calc.Text = "计算";
+            this.btn_tool_qqencrypt_calc.UseVisualStyleBackColor = true;
+            // 
+            // txt_tool_qqencrypt_qq
+            // 
+            this.txt_tool_qqencrypt_qq.Location = new System.Drawing.Point(57, 17);
+            this.txt_tool_qqencrypt_qq.Name = "txt_tool_qqencrypt_qq";
+            this.txt_tool_qqencrypt_qq.Size = new System.Drawing.Size(152, 21);
+            this.txt_tool_qqencrypt_qq.TabIndex = 2;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(6, 58);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(29, 12);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "结果";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(6, 20);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(17, 12);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "QQ";
             // 
             // Form1
             // 
@@ -1177,12 +1360,17 @@ namespace TCSniffer
             this.splitContainer9.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);
             this.splitContainer2.Panel1.ResumeLayout(false);
+            this.splitContainer2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
             this.groupBox_keySetting.ResumeLayout(false);
             this.groupBox_keySetting.PerformLayout();
             this.ctxMenuStrip_packets.ResumeLayout(false);
             this.ctxMenuStrip_trace_flow.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1289,6 +1477,23 @@ namespace TCSniffer
         public System.Windows.Forms.TreeView treeView_analy;
         public System.Windows.Forms.ToolStripMenuItem 分析ToolStripMenuItem;
         public System.Windows.Forms.Button button_analy;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Label label11;
+        public System.Windows.Forms.TextBox txt_tool_qqencrypt_pass;
+        private System.Windows.Forms.Label label10;
+        public System.Windows.Forms.Button btn_tool_qqencrypt_copy;
+        public System.Windows.Forms.TextBox txt_tool_qqencrypt_ret;
+        public System.Windows.Forms.Button btn_tool_qqencrypt_calc;
+        public System.Windows.Forms.TextBox txt_tool_qqencrypt_qq;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.GroupBox groupBox3;
+        public System.Windows.Forms.Button btn_tool_md5_copy_once;
+        public System.Windows.Forms.TextBox txt_tool_md5_once;
+        public System.Windows.Forms.Button btn_tool_md5_calc;
+        public System.Windows.Forms.TextBox txt_tool_md5_input;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
     }
 }
 

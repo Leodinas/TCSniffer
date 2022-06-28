@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Threading;
 using System.Windows.Forms;
 using TCSniffer.common;
@@ -32,12 +33,24 @@ namespace TCSniffer
         private void Form1_Load(object sender, EventArgs e)
         {
             Form = this;
+            Form.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMain_FormClosing);
             LoadDevices();
             RegCustomEvents();
             OptimizeListView();
             listView_package.ContextMenuStrip = ctxMenuStrip_packets;
             r_txt_log.ContextMenuStrip = ctxMenuStrip_analysis_tools;
             listView_analysis.ContextMenuStrip = ctxMenuStrip_trace_flow;
+        }
+
+        private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            InvokeClick(btn_stop_httpserver);
+            if (Device != null && Device.Started)
+            {
+                Device.StopCapture();
+                Device.Close();
+            }
+            
         }
 
         private void OptimizeListView()
@@ -67,6 +80,16 @@ namespace TCSniffer
             }
         }
 
+        private void InvokeClick(Button button)
+        {
+            Type type = button.GetType();
+            object[] o = new object[1];
+            MethodInfo m = type.GetMethod("OnClick", BindingFlags.NonPublic | BindingFlags.Instance);
+            o[0] = EventArgs.Empty;
+            m.Invoke(button, o);
+            return;
+        }
+
         private static bool IsCustomEventAttrbute(Attribute[] o)
         {
             foreach (Attribute a in o)
@@ -82,7 +105,6 @@ namespace TCSniffer
         {
             Invoke(action);
         }
-
 
         private void LoadDevices()
         {
@@ -128,10 +150,6 @@ namespace TCSniffer
             }).Start();
         }
 
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void button2_Click(object sender, EventArgs e)
         {

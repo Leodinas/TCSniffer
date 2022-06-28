@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -24,6 +25,16 @@ namespace TCSniffer.form.menu
             Frm.复制全部载荷ToolStripMenuItem.Click += CopyWholePayload_Click;
             Frm.读取抓包记录ToolStripMenuItem.Click += ReadCapturePacketsLogs_Click;
             Frm.保存抓包记录ToolStripMenuItem.Click += SaveCapturePacketsLogs_Click;
+        }
+
+        private void InvokeClick(Button button)
+        {
+            Type type = button.GetType();
+            object[] o = new object[1];
+            MethodInfo m = type.GetMethod("OnClick", BindingFlags.NonPublic | BindingFlags.Instance);
+            o[0] = EventArgs.Empty;
+            m.Invoke(button, o);
+            return;
         }
 
         #region ctxMenuPackets
@@ -67,6 +78,8 @@ namespace TCSniffer.form.menu
             {
                 DisplayPacketLogListView(FileUtil.ReadString(file.FileName));
             }
+
+            InvokeClick(Frm.button_readKey);
         }
 
         private void SaveCapturePacketsLogs_Click(object sender, EventArgs e)
