@@ -46,28 +46,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="attributes\CustomEvent.cs" />
-    <Compile Include="attributes\TLVParser.cs" />
-    <Compile Include="common\Common.cs" />
-    <Compile Include="common\ICustomControlEvents.cs" />
-    <Compile Include="component\DeviceItem.cs" />
-    <Compile Include="component\PacketAnalyzer.cs" />
-    <Compile Include="component\RealTimePacketsAnalyzer.cs" />
-    <Compile Include="extension\MessageBoxEx.cs" />
-    <Compile Include="extension\MyDictionaryComparer.cs" />
-    <Compile Include="form\Form1.cs">
+    <Compile Include="Attributes\CustomEvent.cs" />
+    <Compile Include="Attributes\TLVParser.cs" />
+    <Compile Include="Common\Common.cs" />
+    <Compile Include="Common\ICustomControlEvents.cs" />
+    <Compile Include="Component\DeviceItem.cs" />
+    <Compile Include="Component\PacketAnalyzer.cs" />
+    <Compile Include="Component\RealTimePacketsAnalyzer.cs" />
+    <Compile Include="Extension\MessageBoxEx.cs" />
+    <Compile Include="Extension\MyDictionaryComparer.cs" />
+    <Compile Include="Form\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="form\Form1.Designer.cs">
+    <Compile Include="Form\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="form\menu\CtxMenuAnalysisTools.cs" />
-    <Compile Include="form\menu\CtxMenuPackets.cs" />
-    <Compile Include="form\menu\ctxMenuStripListAnaly.cs" />
-    <Compile Include="form\TabHttpServer.cs" />
-    <Compile Include="form\TabPbJceTools.cs" />
-    <Compile Include="form\TabTEA.cs" />
-    <Compile Include="form\TabTools.cs" />
+    <Compile Include="Form\menu\CtxMenuAnalysisTools.cs" />
+    <Compile Include="Form\menu\CtxMenuPackets.cs" />
+    <Compile Include="Form\menu\ctxMenuStripListAnaly.cs" />
+    <Compile Include="Form\TabHttpServer.cs" />
+    <Compile Include="Form\TabPbJceTools.cs" />
+    <Compile Include="Form\TabTEA.cs" />
+    <Compile Include="Form\TabTools.cs" />
     <Compile Include="HttpServer\HttpServer.cs" />
     <Compile Include="HttpServer\HttpServerHandler.cs" />
     <Compile Include="HttpServer\HttpServerInitializer.cs" />
@@ -111,13 +111,13 @@
     <Compile Include="TLVParser\TLV511.cs" />
     <Compile Include="TLVParser\TLV545.cs" />
     <Compile Include="TLVParser\TLVFormatter.cs" />
-    <Compile Include="utils\FileUtil.cs" />
-    <Compile Include="utils\HexUtil.cs" />
-    <Compile Include="utils\MixUtil.cs" />
-    <Compile Include="utils\PacketLogLVI.cs" />
-    <Compile Include="utils\Tea.cs" />
-    <Compile Include="utils\Toast.cs" />
-    <EmbeddedResource Include="form\Form1.resx">
+    <Compile Include="Utils\FileUtil.cs" />
+    <Compile Include="Utils\HexUtil.cs" />
+    <Compile Include="Utils\MixUtil.cs" />
+    <Compile Include="Utils\PacketLogLVI.cs" />
+    <Compile Include="Utils\Tea.cs" />
+    <Compile Include="Utils\Toast.cs" />
+    <EmbeddedResource Include="Form\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
