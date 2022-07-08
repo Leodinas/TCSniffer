@@ -13,8 +13,6 @@ date: 2022-6-28
 
 [https://github.com/touale/TCSniffer](https://github.com/touale/TCSniffer)
 
-如果你觉得项目对你有用，请给一个star哦！
-
 # 前言
 
 在TC_QQSniffer出来前，对于QQ协议分析过程存在很多问题，整个过程是非常麻烦的:
@@ -122,6 +120,3 @@ date: 2022-6-28
 
 
 - - -
-
-
-如果你觉得项目对你有用，请给项目一个star哦！
